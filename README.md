@@ -16,7 +16,7 @@ sudo usermod -a -G dialout $USER
 sudo reboot
 ```
 
-Add the Lemonade stable PPA:
+Add the [Lemonade](https://lemonade-server.ai/) stable PPA:
 ```
 sudo add-apt-repository ppa:lemonade-team/stable
 sudo apt update
@@ -27,12 +27,6 @@ Install SQLite for DB purposes:
 ```
 sudo apt install sqlite3
 ```
-
-For ROCM use the backend install:
-```
-lemonade backends install vllm:rocm
-```
-Note: it failed for me the first time I ran but worked on a subsequent run with the cached files on disk from the first
 
 Install my Meshtastic finetune of Gemma 4 and Kokoro-v1:
 ```
@@ -112,3 +106,15 @@ CHANNEL_KEY_BASE64=
 - !subscribe: Adds the user to the subscription of emergency state notifications
 - !unsubscribe: Removes the user from the subscription of emergency state notifications
 - !discord [message]: Sends message to discord channel setup
+
+Note: the discord bot also allows messages in the chosen channel to be sent to the end Meshtastic nodes. The fine-tuned Gemma 4 used here additionally ensures that the messages are kept short so they can be sent over Meshtastic without issue.
+
+## Additional areas of interest
+
+### Lemonade
+
+This repo uses [Lemonade](https://lemonade-server.ai/) by AMD. It makes the process of getting started simple as you don't need to worry about setup outside of pulling down the model and running it. It's also helpful that you can go into chat mode and test the different models allowing you to get a feel for which one would work best for your use case. 
+
+### Purpose
+
+I built this software as my children are going away for sleep away camp in an area with little to no WiFi coverage. I wanted to be able to provide a useful service they could count on while camping and hiking and also provide a means to communicate if anything happened off-grid. Meshtastic makes it easy to use LoRa for the purpose of communication and this software makes it easy to provide useful data and communication means even when a state away and with little connectivity.
