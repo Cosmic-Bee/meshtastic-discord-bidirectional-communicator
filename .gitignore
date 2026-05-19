@@ -1,0 +1,18 @@
+# Environments
+.env
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+*.sqlite3
+
+# Audio output
+alert.wav
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Test files used during development
+test/

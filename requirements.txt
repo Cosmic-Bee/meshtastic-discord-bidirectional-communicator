@@ -1,0 +1,7 @@
+discord.py
+openai
+paho-mqtt
+cryptography
+meshtastic
+python-dotenv
+requests
