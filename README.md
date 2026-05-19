@@ -58,7 +58,7 @@ Install pip dependencies:
 pip install -r requirements.txt
 ```
 
-Set the volume up for TTY purposes:
+Set the volume up for TTS purposes:
 ```
 amixer sset Master 100%
 amixer sset PCM 100%
