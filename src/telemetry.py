@@ -57,7 +57,7 @@ async def fetch_earthquake_data(lat, lon):
 async def fetch_weather_alerts(lat, lon):
     try:
         url = f"https://api.weather.gov/alerts/active?point={lat},{lon}"
-        headers = {"User-Agent": "EmergencyCommsMeshBridge/1.0 (tim@lovett.tech)"}
+        headers = {"User-Agent": "EmergencyCommsMeshBridge/1.0"}
         loop = asyncio.get_event_loop()
         res = await loop.run_in_executor(None, lambda: requests.get(url, headers=headers, timeout=10))
         if res.status_code != 200:
